@@ -1,0 +1,59 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Logic -->
+	
+	<bean id = "loadReservationLogic" class="com.kasun.userapp.reservation.logic.LoadReservationLogic">
+		<property name="inventoryDao" ref="inventoryDao"/>
+	</bean>
+			
+	<bean id = "viewAllInventoriesLogic" class="com.kasun.userapp.inventory.logic.ViewAllInventoriesLogic">
+		<property name="inventoryDao" ref="inventoryDao"/>
+	</bean>
+	
+	<bean id = "addInventoryLogic" class="com.kasun.userapp.inventory.logic.AddInventoryLogic">
+		<property name="inventoryDao" ref="inventoryDao"/>
+	</bean>
+	
+	<bean id = "searchInventoryLogic" class="com.kasun.userapp.inventory.logic.SearchInventoryLogic">
+		<property name="inventoryDao" ref="inventoryDao"/>
+	</bean>
+	
+	<bean id = "deleteInventoryLogic" class="com.kasun.userapp.inventory.logic.DeleteInventoryLogic">
+		<property name="inventoryDao" ref="inventoryDao"/>
+	</bean>
+	
+	<!-- Service -->
+	
+	<bean id = "inventoryService" class="com.kasun.userapp.inventory.service.InventoryServiceImpl">
+		<property name="addInventoryLogic" ref="addInventoryLogic"/>
+		<property name="searchInventoryLogic" ref="searchInventoryLogic"/>
+		<property name="viewAllInventoriesLogic" ref="viewAllInventoriesLogic"/>
+		<property name="deleteInventoryLogic" ref="deleteInventoryLogic"/>
+	</bean>
+	
+	<bean id = "reservationService" class="com.kasun.userapp.reservation.service.ReservationServiceImpl">
+		<property name="loadReservationLogic" ref="loadReservationLogic"/>
+	</bean>
+	
+	<!-- Dao -->
+	
+	<bean id = "inventoryDao" class="com.kasun.userapp.inventory.dao.InventoryJDBCDao">
+		<property name="dataSource"  ref="dataSource" />
+	</bean>
+	
+	<!-- Data Source -->
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/INVENTORY"/>
+		<property name="username" value="root"/>
+		<property name="password" value="root"/>
+	</bean>
+	
+</beans>

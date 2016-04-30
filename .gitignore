@@ -1,0 +1,11 @@
+README.md~
+gradle.properties~
+.classpath
+.gitignore.swp
+.gradle/
+.project
+.settings/
+bin/
+build/
+src/main/resources/log4j.properties
+src/main/webapp/WEB-INF/applicationContext.xml~
