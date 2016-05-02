@@ -1,0 +1,5 @@
+rootProject.name = 'TransportHelper'
+
+include 'app'
+include 'core'
+

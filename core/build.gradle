@@ -1,0 +1,4 @@
+dependencies {
+    testCompile 'org.testng:testng:' + testngVersion,
+            'org.mockito:mockito-all:' + mokitoVersion
+}
