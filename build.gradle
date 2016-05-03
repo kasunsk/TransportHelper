@@ -8,4 +8,17 @@ subprojects {
             url isaFetchURL
         }
     }
+
+    dependencies {
+
+        compile 'org.springframework:spring-webmvc:' + springVersion,
+                'org.springframework:spring-core:' + springVersion,
+                'org.springframework:spring-beans:' + springVersion,
+                'org.springframework:spring-aop:' + springVersion,
+                'org.springframework:spring-context:' + springVersion,
+                'org.springframework:spring-web:' + springVersion,
+                'org.hibernate:hibernate-core:' + hibernateVersion,
+                'log4j:log4j:' + log4jVersion,
+                'org.slf4j:slf4j-log4j12:' + slf4jVersion
+    }
 }

@@ -1,9 +1,12 @@
 apply plugin: 'application'
 
 dependencies {
-    compile 'log4j:log4j:1.2.17'
+
     compile project(':commonlib')
+    compile project(':api')
     compile project(':core')
+
+    compile 'log4j:log4j:1.2.17'
 }
 
 mainClassName = 'HelloWorld'
