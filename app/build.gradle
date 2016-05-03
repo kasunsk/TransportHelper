@@ -2,10 +2,11 @@ apply plugin: 'application'
 
 dependencies {
     compile 'log4j:log4j:1.2.17'
+    compile project(':commonlib')
     compile project(':core')
 }
 
-mainClassName = 'net.petrikainulainen.gradle.client.HelloWorld'
+mainClassName = 'HelloWorld'
 
 task copyLicense {
     outputs.file new File("$buildDir/LICENSE")

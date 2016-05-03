@@ -2,4 +2,7 @@ rootProject.name = 'TransportHelper'
 
 include 'app'
 include 'core'
+include 'commonlib'
+include 'api'
+include 'carpool'
 

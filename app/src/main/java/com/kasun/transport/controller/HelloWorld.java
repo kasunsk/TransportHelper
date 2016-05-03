@@ -1,10 +1,10 @@
-package net.petrikainulainen.gradle.client;
+package com.kasun.transport.controller;
 
 import net.petrikainulainen.gradle.core.MessageService;
 import org.apache.log4j.Logger;
 
 /**
- * @author Petri Kainulainen
+ * @author Kasun Kariyawasam
  */
 public class HelloWorld {
 
