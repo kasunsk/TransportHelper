@@ -8,13 +8,13 @@ import javax.persistence.*;
  * Created by kasunk on 5/3/16.
  */
 @Entity
-@Table(name = "CARPOOL")
+@Table(name = "T_CARPOOL")
 public class CarpoolEntity extends AbstractEntity {
 
     @Id
     @Column(name = "CARPOOL_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_CARPOOL")
-    @SequenceGenerator(name = "SEQ_CARPOOL", sequenceName = "SEQ_CARPOOL")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_T_CARPOOL")
+    @SequenceGenerator(name = "SEQ_T_CARPOOL", sequenceName = "SEQ_T_CARPOOL")
     public Long carpoolId;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
