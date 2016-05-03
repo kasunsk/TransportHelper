@@ -1,7 +1,5 @@
 This is an example application of my blog post:
 
-* [Getting Started with Gradle: Creating a Multi-Project Build](http://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-creating-a-multi-project-build/)
-
 You can package the application by running one of the following commands at command prompt:
 
     gradle assemble (runs only the tasks required to create the jar file)
@@ -21,4 +19,11 @@ Both of the commands creates the packaged binary distribution to the _app/build/
 You can run the application by following these steps:
 
 1. Unpackage the binary distribution.
-2. Run the application by invoking the correct startup script found from the _bin_ directory.    
+2. Run the application by invoking the correct startup script found from the _bin_ directory.
+
+--------------------------------------------------------------------------------------------
+
+Simple application for helping transport for a company
+
+Education purpose
+
